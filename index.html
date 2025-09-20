@@ -127,9 +127,61 @@
             font-style: italic;
         }
 
+        ol li::marker {
+            border: 1.2px solid blue; 
+            padding: 2px 5px; 
+            background-color: lightgray;
+            border-radius: 3px;
+            list-style: number;
+        }
+
+
+        .custom-list {
+            list-style: none;
+            counter-reset: custom-counter;
+            padding: 0;
+        }
+
+        .custom-list li {
+            counter-increment: custom-counter;
+            position: relative;
+            margin: 1.5rem 0;
+            padding-left: 3rem;
+        }
+
+        .custom-list li::before {
+            content: counter(custom-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3.5rem;
+            height: 3.5rem;
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+        }
+        /* verticle line */
+        .custom-list li::after {
+            content: "";
+            position: absolute;
+            left: 1.7rem;
+            top: 4rem;
+            width: 2px;
+            height: 100%;
+            background: #FFFFFF5C;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+        }
+
+        .custom-list li:last-child::after {
+            display: none;
+        }
     </style>
 </head>
-<body class="bg-[#101111] text-white">
+<body class="bg-[#101111] text-white poppins-regular">
 
     <div class="flex px-24 flex-col container mx-auto poppins-regular">
 
@@ -303,10 +355,165 @@
             <!-- banner content end -->
         </div>
         <!-- banner end -->
+    </div>
+    <!-- marquee -->
+    <div class="border-t border-b border-solid border-[#FFFFFF40] pt-[20px]  pr-[10px] pb-[20px] pl-[10px]">
+        <div class="flex px-24 flex-row container mx-auto poppins-regular items-center justify-between text-[20px]">
+            <span>Framer</span>
+            <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_74)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8572 0H11.1429V9.93067L4.12081 2.90862L2.90863 4.12081L9.93067 11.1429H0V12.8572H9.93066L2.90863 19.8792L4.12081 21.0913L11.1429 14.0693V24H12.8572V14.0693L19.8792 21.0913L21.0913 19.8792L14.0693 12.8572H24V11.1429H14.0693L21.0913 4.1208L19.8792 2.90862L12.8572 9.93066V0Z" fill="url(#paint0_linear_1_74)"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_1_74" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7A87FB"/>
+                    <stop offset="1" stop-color="#FFD49C"/>
+                    </linearGradient>
+                    <clipPath id="clip0_1_74">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </span>
+            <span>Webflow</span>
+            <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_74)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8572 0H11.1429V9.93067L4.12081 2.90862L2.90863 4.12081L9.93067 11.1429H0V12.8572H9.93066L2.90863 19.8792L4.12081 21.0913L11.1429 14.0693V24H12.8572V14.0693L19.8792 21.0913L21.0913 19.8792L14.0693 12.8572H24V11.1429H14.0693L21.0913 4.1208L19.8792 2.90862L12.8572 9.93066V0Z" fill="url(#paint0_linear_1_74)"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_1_74" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7A87FB"/>
+                    <stop offset="1" stop-color="#FFD49C"/>
+                    </linearGradient>
+                    <clipPath id="clip0_1_74">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </span>
+            <span>Figma</span>
+            <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_74)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8572 0H11.1429V9.93067L4.12081 2.90862L2.90863 4.12081L9.93067 11.1429H0V12.8572H9.93066L2.90863 19.8792L4.12081 21.0913L11.1429 14.0693V24H12.8572V14.0693L19.8792 21.0913L21.0913 19.8792L14.0693 12.8572H24V11.1429H14.0693L21.0913 4.1208L19.8792 2.90862L12.8572 9.93066V0Z" fill="url(#paint0_linear_1_74)"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_1_74" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7A87FB"/>
+                    <stop offset="1" stop-color="#FFD49C"/>
+                    </linearGradient>
+                    <clipPath id="clip0_1_74">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </span>
+            <span>Notion</span>
+            <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_74)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8572 0H11.1429V9.93067L4.12081 2.90862L2.90863 4.12081L9.93067 11.1429H0V12.8572H9.93066L2.90863 19.8792L4.12081 21.0913L11.1429 14.0693V24H12.8572V14.0693L19.8792 21.0913L21.0913 19.8792L14.0693 12.8572H24V11.1429H14.0693L21.0913 4.1208L19.8792 2.90862L12.8572 9.93066V0Z" fill="url(#paint0_linear_1_74)"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_1_74" x1="0" y1="12" x2="24" y2="12" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#7A87FB"/>
+                    <stop offset="1" stop-color="#FFD49C"/>
+                    </linearGradient>
+                    <clipPath id="clip0_1_74">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </span>
+        </div>
+    </div>
+    <!-- marquee end  -->
 
+    <!-- My Process to Design -->
+    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+        <h4 class="text-[40px]">My Process to Design</h4>
+        <span class="ml-5">
+            <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 36.5C15.469 27.9501 8.54135 21.0287 0 21.0287C8.56041 21.0287 15.5 14.0762 15.5 5.5C15.5309 14.0499 22.4586 20.9713 31 20.9713C22.4394 20.9713 15.5 27.9238 15.5 36.5Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5 15.5C28.485 11.363 25.1329 8.0139 21 8.0139C25.1421 8.0139 28.5 4.64977 28.5 0.5C28.5149 4.63704 31.8671 7.9861 36 7.9861C31.8578 7.9861 28.5 11.3502 28.5 15.5Z" fill="white"/>
+            </svg>
+        </span>
 
+    </div>
+    <!-- My Process to Design end -->
 
-        <!-- footer -->
+    <!-- time line -->
+    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+        <ul class="custom-list">
+            <li>
+                <div class="ml-20 w-[595px] mb-20">
+                    <span>
+                        <svg width="54" height="56" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M53.8958 17.3507C51.432 11.3596 46.9672 6.40809 41.2619 3.33988C35.5567 0.271662 28.964 -0.723412 22.6074 0.524199C16.2507 1.77181 10.5233 5.18492 6.40098 10.182C2.27869 15.179 0.0165768 21.4508 9.0676e-05 27.9287C-0.0163955 34.4067 2.21376 40.6899 6.31057 45.7079C10.4074 50.7258 16.1174 54.168 22.4676 55.448C28.8178 56.7279 35.4154 55.7664 41.1362 52.7273C46.857 49.6882 51.347 44.7595 53.8413 38.7809L28 28L53.8958 17.3507Z" fill="url(#paint0_linear_1_93)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_1_93" x1="55.7769" y1="24.3575" x2="0.201696" y2="24.7785" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#7A87FB"/>
+                            <stop offset="1" stop-color="#FFD49C"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                    <h4 class="text-[22px] mx-2 my-4 ">Step 1: Product design Research</h4>
+                    <p class="text-[19px] mx-2 my-4">
+                        This initial step involves a systematic and thorough exploration of the market landscape, user needs, and existing solutions.
+                    </p>
+                    <button class="rounded-full p-[1px] bg-gradient-to-r from-[#FFD49C] to-[#7A87FB] mx-2 my-4">
+                        <span class="flex h-full items-center rounded-full bg-[#101111] py-2 px-4">See Examples</span>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <div class="ml-20 w-[595px] mb-20">
+                    <span>
+                        <svg class="rotate-90" width="54" height="56" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M53.8958 17.3507C51.432 11.3596 46.9672 6.40809 41.2619 3.33988C35.5567 0.271662 28.964 -0.723412 22.6074 0.524199C16.2507 1.77181 10.5233 5.18492 6.40098 10.182C2.27869 15.179 0.0165768 21.4508 9.0676e-05 27.9287C-0.0163955 34.4067 2.21376 40.6899 6.31057 45.7079C10.4074 50.7258 16.1174 54.168 22.4676 55.448C28.8178 56.7279 35.4154 55.7664 41.1362 52.7273C46.857 49.6882 51.347 44.7595 53.8413 38.7809L28 28L53.8958 17.3507Z" fill="url(#paint0_linear_1_93)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_1_93" x1="55.7769" y1="24.3575" x2="0.201696" y2="24.7785" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#7A87FB"/>
+                            <stop offset="1" stop-color="#FFD49C"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                    <h4 class="text-[22px] mx-2 my-4 ">Step 2: UI design in figma</h4>
+                    <p class="text-[19px] mx-2 my-4">
+                        This initial step involves a systematic and thorough exploration of the market landscape, user needs, and existing solutions.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="ml-20 w-[595px] mb-20">
+                    <span>
+                        <svg class="rotate-180" width="54" height="56" viewBox="0 0 54 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M53.8958 17.3507C51.432 11.3596 46.9672 6.40809 41.2619 3.33988C35.5567 0.271662 28.964 -0.723412 22.6074 0.524199C16.2507 1.77181 10.5233 5.18492 6.40098 10.182C2.27869 15.179 0.0165768 21.4508 9.0676e-05 27.9287C-0.0163955 34.4067 2.21376 40.6899 6.31057 45.7079C10.4074 50.7258 16.1174 54.168 22.4676 55.448C28.8178 56.7279 35.4154 55.7664 41.1362 52.7273C46.857 49.6882 51.347 44.7595 53.8413 38.7809L28 28L53.8958 17.3507Z" fill="url(#paint0_linear_1_93)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_1_93" x1="55.7769" y1="24.3575" x2="0.201696" y2="24.7785" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#7A87FB"/>
+                            <stop offset="1" stop-color="#FFD49C"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </span>
+                    <h4 class="text-[22px] mx-2 my-4 ">Step 3: No-code develop in webflow</h4>
+                    <p class="text-[19px] mx-2 my-4">
+                        This initial step involves a systematic and thorough exploration of the market landscape, user needs, and existing solutions.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- time line end -->
+
+    <!-- footer -->
+    <div class="flex px-24 flex-col container mx-auto poppins-regular">
+    
         <footer class="flex w-full mx-auto h-[52px] my-[46px] gap-[212px]">
             <div class="flex items-center gap-x-2">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -430,10 +637,10 @@
             </div>
             <!-- hire me end -->
         </footer>
-        <!-- footer end -->
-
         
     </div>
+    <!-- footer end -->
+        
 
     
 </body>
