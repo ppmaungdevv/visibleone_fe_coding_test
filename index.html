@@ -179,9 +179,37 @@
         .custom-list li:last-child::after {
             display: none;
         }
+
+        .custom-border {
+            border-top: 3px solid;
+            border-left: 3px solid;
+            border-image: linear-gradient(to right, #FFD49C, #7A87FB70, transparent) 1;
+            /* border-radius: 50%; */
+        }
+
+        .custom-rectangle {
+            clip-path: polygon(0 0, 100% 9%, 100% 85%, 0 100%);
+        }
+
+        .custom-circle{
+            width: 50px;
+            height: 50px;
+            background: #878787;
+            border-radius: 50%;
+        }
+
+        /* .wide-right {
+            transform: skew(20deg);
+            background: linear-gradient(to right, #FFD49C, #7A87FB70, transparent);
+        } */
+
+        
+
     </style>
 </head>
 <body class="bg-[#101111] text-white poppins-regular">
+
+    
 
     <div class="flex px-24 flex-col container mx-auto poppins-regular">
 
@@ -356,6 +384,7 @@
         </div>
         <!-- banner end -->
     </div>
+
     <!-- marquee -->
     <div class="border-t border-b border-solid border-[#FFFFFF40] pt-[20px]  pr-[10px] pb-[20px] pl-[10px]">
         <div class="flex px-24 flex-row container mx-auto poppins-regular items-center justify-between text-[20px]">
@@ -510,6 +539,205 @@
         </ul>
     </div>
     <!-- time line end -->
+
+    <!-- Some Featured projects -->
+
+    <!-- Some Featured projects end -->
+
+
+    <!-- Client testimonials -->
+    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+        <h4 class="text-[40px]">Client testimonials</h4>
+        <span class="ml-5">
+            <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 36.5C15.469 27.9501 8.54135 21.0287 0 21.0287C8.56041 21.0287 15.5 14.0762 15.5 5.5C15.5309 14.0499 22.4586 20.9713 31 20.9713C22.4394 20.9713 15.5 27.9238 15.5 36.5Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5 15.5C28.485 11.363 25.1329 8.0139 21 8.0139C25.1421 8.0139 28.5 4.64977 28.5 0.5C28.5149 4.63704 31.8671 7.9861 36 7.9861C31.8578 7.9861 28.5 11.3502 28.5 15.5Z" fill="white"/>
+            </svg>
+        </span>
+    </div>
+
+    
+    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+        <div class="grid grid-cols-2 gap-10">
+            
+            <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
+                <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
+                    <div class="flex flex-cols justify-between items-center p-2">
+                        <div class="flex items-center gap-4">
+                            <div class="custom-circle">
+                            </div>
+                            <div>
+                                <p class="text-[16px]">Client Name .</p>
+                                <p class="text-[12px]">Product designer</p>
+                            </div>
+                        </div>
+                        <div class="text-3xl">
+                            <svg width="45" height="33" viewBox="0 0 45 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5579 23.6429C19.5579 28.6823 16.0877 32.5 10.807 32.5C5.52632 32.5 1 28.2241 1 20.5887C1 11.1207 8.09123 3.02709 17.2947 1.5V7.15025C12.014 8.21921 8.09123 12.0369 8.09123 16.4655C8.99649 15.8547 10.2035 15.3965 12.1649 15.3965C16.0877 15.3965 19.5579 18.298 19.5579 23.6429ZM44 23.6429C44 28.6823 40.3789 32.5 35.0982 32.5C29.9684 32.5 25.2912 28.2241 25.2912 20.5887C25.2912 11.1207 32.3825 3.02709 41.7368 1.5V7.15025C36.4561 8.21921 32.5333 12.0369 32.5333 16.3128C33.4386 15.702 34.7965 15.3965 36.607 15.3965C40.5298 15.3965 44 18.298 44 23.6429Z" fill="url(#paint0_linear_1_180)" stroke="url(#paint1_linear_1_180)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_1_180" x1="43.8287" y1="14.9836" x2="1.15714" y2="15.432" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7A87FB"/>
+                                <stop offset="1" stop-color="#FFD49C"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1_180" x1="1" y1="2" x2="47.5" y2="33" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.294339" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+    
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
+                <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
+                    <div class="flex flex-cols justify-between items-center p-2">
+                        <div class="flex items-center gap-4">
+                            <div class="custom-circle">
+                            </div>
+                            <div>
+                                <p class="text-[16px]">Client Name .</p>
+                                <p class="text-[12px]">Product designer</p>
+                            </div>
+                        </div>
+                        <div class="text-3xl">
+                            <svg width="45" height="33" viewBox="0 0 45 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5579 23.6429C19.5579 28.6823 16.0877 32.5 10.807 32.5C5.52632 32.5 1 28.2241 1 20.5887C1 11.1207 8.09123 3.02709 17.2947 1.5V7.15025C12.014 8.21921 8.09123 12.0369 8.09123 16.4655C8.99649 15.8547 10.2035 15.3965 12.1649 15.3965C16.0877 15.3965 19.5579 18.298 19.5579 23.6429ZM44 23.6429C44 28.6823 40.3789 32.5 35.0982 32.5C29.9684 32.5 25.2912 28.2241 25.2912 20.5887C25.2912 11.1207 32.3825 3.02709 41.7368 1.5V7.15025C36.4561 8.21921 32.5333 12.0369 32.5333 16.3128C33.4386 15.702 34.7965 15.3965 36.607 15.3965C40.5298 15.3965 44 18.298 44 23.6429Z" fill="url(#paint0_linear_1_180)" stroke="url(#paint1_linear_1_180)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_1_180" x1="43.8287" y1="14.9836" x2="1.15714" y2="15.432" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7A87FB"/>
+                                <stop offset="1" stop-color="#FFD49C"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1_180" x1="1" y1="2" x2="47.5" y2="33" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.294339" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+    
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
+                <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
+                    <div class="flex flex-cols justify-between items-center p-2">
+                        <div class="flex items-center gap-4">
+                            <div class="custom-circle">
+                            </div>
+                            <div>
+                                <p class="text-[16px]">Client Name .</p>
+                                <p class="text-[12px]">Product designer</p>
+                            </div>
+                        </div>
+                        <div class="text-3xl">
+                            <svg width="45" height="33" viewBox="0 0 45 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5579 23.6429C19.5579 28.6823 16.0877 32.5 10.807 32.5C5.52632 32.5 1 28.2241 1 20.5887C1 11.1207 8.09123 3.02709 17.2947 1.5V7.15025C12.014 8.21921 8.09123 12.0369 8.09123 16.4655C8.99649 15.8547 10.2035 15.3965 12.1649 15.3965C16.0877 15.3965 19.5579 18.298 19.5579 23.6429ZM44 23.6429C44 28.6823 40.3789 32.5 35.0982 32.5C29.9684 32.5 25.2912 28.2241 25.2912 20.5887C25.2912 11.1207 32.3825 3.02709 41.7368 1.5V7.15025C36.4561 8.21921 32.5333 12.0369 32.5333 16.3128C33.4386 15.702 34.7965 15.3965 36.607 15.3965C40.5298 15.3965 44 18.298 44 23.6429Z" fill="url(#paint0_linear_1_180)" stroke="url(#paint1_linear_1_180)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_1_180" x1="43.8287" y1="14.9836" x2="1.15714" y2="15.432" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7A87FB"/>
+                                <stop offset="1" stop-color="#FFD49C"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1_180" x1="1" y1="2" x2="47.5" y2="33" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.294339" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+    
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
+                <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
+                    <div class="flex flex-cols justify-between items-center p-2">
+                        <div class="flex items-center gap-4">
+                            <div class="custom-circle">
+                            </div>
+                            <div>
+                                <p class="text-[16px]">Client Name .</p>
+                                <p class="text-[12px]">Product designer</p>
+                            </div>
+                        </div>
+                        <div class="text-3xl">
+                            <svg width="45" height="33" viewBox="0 0 45 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5579 23.6429C19.5579 28.6823 16.0877 32.5 10.807 32.5C5.52632 32.5 1 28.2241 1 20.5887C1 11.1207 8.09123 3.02709 17.2947 1.5V7.15025C12.014 8.21921 8.09123 12.0369 8.09123 16.4655C8.99649 15.8547 10.2035 15.3965 12.1649 15.3965C16.0877 15.3965 19.5579 18.298 19.5579 23.6429ZM44 23.6429C44 28.6823 40.3789 32.5 35.0982 32.5C29.9684 32.5 25.2912 28.2241 25.2912 20.5887C25.2912 11.1207 32.3825 3.02709 41.7368 1.5V7.15025C36.4561 8.21921 32.5333 12.0369 32.5333 16.3128C33.4386 15.702 34.7965 15.3965 36.607 15.3965C40.5298 15.3965 44 18.298 44 23.6429Z" fill="url(#paint0_linear_1_180)" stroke="url(#paint1_linear_1_180)"/>
+                                <defs>
+                                <linearGradient id="paint0_linear_1_180" x1="43.8287" y1="14.9836" x2="1.15714" y2="15.432" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7A87FB"/>
+                                <stop offset="1" stop-color="#FFD49C"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_1_180" x1="1" y1="2" x2="47.5" y2="33" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.294339" stop-color="white" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+    
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Client testimonials end -->
+
+    <!-- have idea -->
+    <div class="justify-center items-center flex flex-cols px-10 gap-16 my-20 container mx-auto poppins-regular">
+        <div class="flex flex-col gap-7">
+            <div class="items-center flex flex-cols">
+                <h4 class="text-[40px]">Have idea about project?</h4>
+                <span class="ml-5">
+                    <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 36.5C15.469 27.9501 8.54135 21.0287 0 21.0287C8.56041 21.0287 15.5 14.0762 15.5 5.5C15.5309 14.0499 22.4586 20.9713 31 20.9713C22.4394 20.9713 15.5 27.9238 15.5 36.5Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5 15.5C28.485 11.363 25.1329 8.0139 21 8.0139C25.1421 8.0139 28.5 4.64977 28.5 0.5C28.5149 4.63704 31.8671 7.9861 36 7.9861C31.8578 7.9861 28.5 11.3502 28.5 15.5Z" fill="white"/>
+                    </svg>
+                </span>
+            </div>
+            <span>
+                Write anything here something about yourself to showcase what actually you doing or targeting etc.
+            </span>
+            <div>
+                <button class="rounded-full p-[1px] bg-gradient-to-l from-[#7A87FB] to-[#FFD49C] mx-2 my-4 text-black">
+                    <span class="flex h-full items-center rounded-full bg-gradient-to-r from-[#7A87FB] to-[#FFD49C] py-2 px-4">Send us a Message</span>
+                </button>
+            </div>
+        </div>
+        <div class="p-3">
+            <span>
+                <svg width="393" height="393" viewBox="0 0 393 393" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="354.5" y1="392.021" x2="354.5" y2="9.15527e-05" stroke="#404040"/>
+                    <line x1="274.5" y1="392.021" x2="274.5" y2="9.15527e-05" stroke="#404040"/>
+                    <line x1="195.5" y1="392.021" x2="195.5" y2="9.15527e-05" stroke="#404040"/>
+                    <line y1="290.5" x2="392.02" y2="290.5" stroke="#404040"/>
+                    <line y1="203.5" x2="392.02" y2="203.5" stroke="#404040"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M195.5 219C195.469 210.45 188.541 203.529 180 203.529C188.56 203.529 195.5 196.576 195.5 188C195.531 196.55 202.459 203.471 211 203.471C202.439 203.471 195.5 210.424 195.5 219Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M275.5 306C275.469 297.45 268.541 290.529 260 290.529C268.56 290.529 275.5 283.576 275.5 275C275.531 283.55 282.459 290.471 291 290.471C282.439 290.471 275.5 297.424 275.5 306Z" fill="white"/>
+                </svg>
+            </span>
+        </div>
+    </div>
+    <!-- have idea end -->
+
 
     <!-- footer -->
     <div class="flex px-24 flex-col container mx-auto poppins-regular">
