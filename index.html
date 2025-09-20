@@ -17,6 +17,8 @@
 
     <title>Visible One</title>
     
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <!-- poppins font css -->
     <style>
         .poppins-thin {
@@ -180,17 +182,6 @@
             display: none;
         }
 
-        .custom-border {
-            border-top: 3px solid;
-            border-left: 3px solid;
-            border-image: linear-gradient(to right, #FFD49C, #7A87FB70, transparent) 1;
-            /* border-radius: 50%; */
-        }
-
-        .custom-rectangle {
-            clip-path: polygon(0 0, 100% 9%, 100% 85%, 0 100%);
-        }
-
         .custom-circle{
             width: 50px;
             height: 50px;
@@ -198,16 +189,11 @@
             border-radius: 50%;
         }
 
-        /* .wide-right {
-            transform: skew(20deg);
-            background: linear-gradient(to right, #FFD49C, #7A87FB70, transparent);
-        } */
-
         
 
     </style>
 </head>
-<body class="bg-[#101111] text-white poppins-regular">
+<body class="bg-[#101111] text-white poppins-regular" x-data="vo_data">
 
     
 
@@ -461,7 +447,7 @@
     <!-- marquee end  -->
 
     <!-- My Process to Design -->
-    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+    <div class="items-center flex flex-row px-24 my-20 container mx-auto poppins-regular">
         <h4 class="text-[40px]">My Process to Design</h4>
         <span class="ml-5">
             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -474,7 +460,7 @@
     <!-- My Process to Design end -->
 
     <!-- time line -->
-    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+    <div class="items-center flex flex-row px-24 my-20 container mx-auto poppins-regular">
         <ul class="custom-list">
             <li>
                 <div class="ml-20 w-[595px] mb-20">
@@ -541,12 +527,35 @@
     <!-- time line end -->
 
     <!-- Some Featured projects -->
+    <div class="items-center flex flex-row px-24 my-20 container mx-auto poppins-regular">
+        <h4 class="text-[40px]">Some Featured projects</h4>
+        <span class="ml-5">
+            <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 36.5C15.469 27.9501 8.54135 21.0287 0 21.0287C8.56041 21.0287 15.5 14.0762 15.5 5.5C15.5309 14.0499 22.4586 20.9713 31 20.9713C22.4394 20.9713 15.5 27.9238 15.5 36.5Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5 15.5C28.485 11.363 25.1329 8.0139 21 8.0139C25.1421 8.0139 28.5 4.64977 28.5 0.5C28.5149 4.63704 31.8671 7.9861 36 7.9861C31.8578 7.9861 28.5 11.3502 28.5 15.5Z" fill="white"/>
+            </svg>
+        </span>
+    </div>
+
+    <div class="items-center flex flex-col gap-10 px-24 my-20 container mx-auto poppins-regular" x-data="projects">
+        <template x-for="(project, index) in projects" :key="index">
+            <div class="flex flex-row gap-10 items-center p-8 bg-[#151515]">
+                <div class="w-[545.5px] h-[545.5px]" x-bind:class="project.gradient_class"></div>
+                <div class="px-10">
+                    <button class="rounded-full p-[1px] bg-gradient-to-r from-[#FFD49C] to-[#7A87FB] my-4 text-[25.2px]">
+                        <span class="flex items-center rounded-full bg-[#101111] px-9 py-5" x-text="index+1"></span>
+                    </button>
+                    <h4 class="text-[36px] font-bold" x-text="project.title"></h4>
+                </div>
+            </div>
+        </template>
+    </div>
 
     <!-- Some Featured projects end -->
 
 
     <!-- Client testimonials -->
-    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+    <div class="items-center flex flex-row px-24 my-20 container mx-auto poppins-regular">
         <h4 class="text-[40px]">Client testimonials</h4>
         <span class="ml-5">
             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -557,12 +566,12 @@
     </div>
 
     
-    <div class="items-center flex flex-cols px-24 my-20 container mx-auto poppins-regular">
+    <div class="items-center flex flex-row px-24 my-20 container mx-auto poppins-regular">
         <div class="grid grid-cols-2 gap-10">
             
             <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
                 <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
-                    <div class="flex flex-cols justify-between items-center p-2">
+                    <div class="flex flex-row justify-between items-center p-2">
                         <div class="flex items-center gap-4">
                             <div class="custom-circle">
                             </div>
@@ -596,7 +605,7 @@
 
             <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
                 <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
-                    <div class="flex flex-cols justify-between items-center p-2">
+                    <div class="flex flex-row justify-between items-center p-2">
                         <div class="flex items-center gap-4">
                             <div class="custom-circle">
                             </div>
@@ -630,7 +639,7 @@
 
             <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
                 <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
-                    <div class="flex flex-cols justify-between items-center p-2">
+                    <div class="flex flex-row justify-between items-center p-2">
                         <div class="flex items-center gap-4">
                             <div class="custom-circle">
                             </div>
@@ -664,7 +673,7 @@
 
             <div class="relative rounded-xl bg-gradient-to-b from-[#FFD49C] via-[#7A87FB70] to-transparent p-[1px] overflow-show">
                 <div class="rounded-xl p-4 bg-[#101111] text-white text-[14px]">
-                    <div class="flex flex-cols justify-between items-center p-2">
+                    <div class="flex flex-row justify-between items-center p-2">
                         <div class="flex items-center gap-4">
                             <div class="custom-circle">
                             </div>
@@ -702,9 +711,9 @@
     <!-- Client testimonials end -->
 
     <!-- have idea -->
-    <div class="justify-center items-center flex flex-cols px-10 gap-16 my-20 container mx-auto poppins-regular">
+    <div class="justify-center items-center flex flex-row px-10 gap-16 my-20 container mx-auto poppins-regular">
         <div class="flex flex-col gap-7">
-            <div class="items-center flex flex-cols">
+            <div class="items-center flex flex-row">
                 <h4 class="text-[40px]">Have idea about project?</h4>
                 <span class="ml-5">
                     <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -872,4 +881,24 @@
 
     
 </body>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('vo_data', () => ({
+            projects: [
+                {
+                    gradient_class: 'bg-gradient-to-r from-[#7A87FB] to-[#FFD49C]',
+                    title: 'Project 1',
+                },
+                {
+                    gradient_class: 'bg-gradient-to-l from-[#7A87FB] to-[#FFD49C]',
+                    title: 'Project 2',
+                },
+                {
+                    gradient_class: 'bg-gradient-to-r from-[#7A87FB] to-[#FFD49C]',
+                    title: 'Project 3',
+                }
+            ]
+        }))
+    })           
+</script>
 </html>
